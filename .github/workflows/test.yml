@@ -1,0 +1,19 @@
+name: GitHub Actions Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: List repository files
+        run: |
+          echo "Repository contents:"
+          ls -la
